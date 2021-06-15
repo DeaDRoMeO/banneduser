@@ -1,0 +1,24 @@
+{
+	"name": "deadromeo/banneduser",
+	"type": "phpbb-extension",
+	"description": "Расширение выводит в блоке статистики количество заблокированных пользователей + реализует на отдельной странице Бан-лист",
+	"homepage": "http://###",
+	"version": "1.0.5",
+	"time": "2020-27-11",
+	"license": "GPL-2.0",
+	"authors": [{
+			"name": "DeaDRoMeO",
+			"homepage": "http://www.hello-vitebsk.ru",
+			"role": "Developer"
+		}],
+	"require": {
+		"php": ">=5.3.3",
+		"phpbb/phpbb": ">=3.3.0"
+	},
+	"extra": {
+		"display-name": "BannedUser",
+		"soft-require": {
+         "phpbb/phpbb": ">=3.3.0"
+		 }
+	}
+}

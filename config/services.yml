@@ -1,0 +1,28 @@
+services:
+    deadromeo.banneduser.controller:
+        class: deadromeo\banneduser\controller\banneduser
+        arguments:
+            - '@request' 
+            - '@config'
+            - '@pagination'
+            - '@dbal.conn'
+            - '@auth'
+            - '@template'
+            - '@user'
+            - '@controller.helper'
+            - '%core.root_path%'
+            - '%core.php_ext%'
+            - '%core.table_prefix%'
+    deadromeo.banneduser.listener:
+        class: deadromeo\banneduser\event\listener
+        arguments:
+            - '@deadromeo.banneduser.controller'
+            - '@config'
+            - '@request'
+            - '@dbal.conn'
+            - '@auth'
+            - '@template'
+            - '@user'
+            - '%core.root_path%'
+        tags:
+            - { name: event.listener }

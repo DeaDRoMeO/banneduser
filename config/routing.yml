@@ -1,0 +1,3 @@
+deadromeo_mytest_controller:
+    path: /banneduser
+    defaults: { _controller: deadromeo.banneduser.controller:main }

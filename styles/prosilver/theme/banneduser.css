@@ -1,0 +1,28 @@
+.div_avert2 {
+  margin: 8px auto;
+  padding: 15px 6px 6px 8px;
+  min-height: 18px;
+  height: auto;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+.span_avert2 {
+  padding-left: 26px;
+  font-size: 9pt;
+}
+
+.error_div2 {
+  background-image: url("./images/error.png");
+  background-position: 4px 4px;
+  background-repeat: no-repeat;
+  background-color: #ffb2b2;
+  border: 2px solid #ff8080;
+}
+.warn_div2 {
+  background-image: url("./images/warning.png");
+  background-position: 4px 4px;
+  background-repeat: no-repeat;
+  background-color: #c2f2b3;
+  border: 2px solid #3cb371;
+}

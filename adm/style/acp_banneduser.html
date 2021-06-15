@@ -1,0 +1,36 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_BU_ACP}<!-- IF BU_VERSION --> <span style="font-size:0.6em;">v. {BU_VERSION}</span><!-- ENDIF --></h1>
+
+<form id="acp_board" method="post" action="{U_ACTION}">
+	<fieldset>
+		<legend>{L_BU_CONFIG}</legend>
+		<dl>
+			<dt><label for="bu_p">{L_BU_P}</label><br /><span>{L_BU_P_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="bu_p" value="1" id="bu_p"<!-- IF BU_P --> checked="checked"<!-- ENDIF -->/> {L_BU_PU}</label>
+				<label><input type="radio" class="radio" name="bu_p" value="0" <!-- IF not BU_P --> checked="checked"<!-- ENDIF --> /> {L_BU_PD}</label>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="bu_u">{L_BU_U}</label><br /><span>{L_BU_U_EXP}</span></dt>
+			<dd><input type="number" id="bu_u" name="bu_u" size="30" value="{BU_U}" /></dd>
+		</dl>
+			<dl>
+			<dt><label for="bu_vi">{L_BU_VI}</label><br /><span>{L_BU_VI_EXP}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" name="bu_vi" value="1" id="bu_vi"<!-- IF BU_VI --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+				<label><input type="radio" class="radio" name="bu_vi" value="0" <!-- IF not BU_VI --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</dd>
+		</dl>
+	</fieldset>
+	<fieldset>
+		<legend>{L_ACP_SUBMIT_CHANGES}</legend>
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+		{S_FORM_TOKEN}
+	</fieldset>
+</form>
+<!-- INCLUDE overall_footer.html -->

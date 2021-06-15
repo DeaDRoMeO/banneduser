@@ -1,0 +1,75 @@
+<!-- INCLUDE overall_header.html -->
+
+<form method="post" action="{S_MODE_ACTION}">
+<h2 class="solo">{PAGE_TITLE}</h2>
+<div class="panel">
+	<div class="inner">
+		<ul class="linklist">
+			
+			<li class="rightside pagination">
+				{L_BU} {TOTAL_USERS} &bull; 
+				<!-- IF .pagination -->
+		<!-- INCLUDE pagination.html -->
+	<!-- ELSE -->{PAGE_NUMBER}<!-- ENDIF -->
+			</li>
+		</ul>
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+	
+	<div class="forumbg forumbg-table">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<table class="table1" cellspacing="1" id="banlist">
+		<thead>
+		<tr>
+			<th width="5%">#</th>
+			<th width="19%"><a href="{U_SORT_USERNAME}">{L_BAN_USERNAME}</a></th>
+			<th width="19%"><a href="{U_SORT_BAN_START}">{L_BAN_START_DATE}</a></th>
+			<th width="19%">{L_BAN_END_DATE}</th>
+			<th width="19%">{L_WARN}</th>
+			<th width="19%">{L_BAN_REASON}</th>
+			
+		</tr>
+		</thead>
+		<tbody>
+		<!-- BEGIN banlist_row -->
+		<tr class="bg1">
+		<td style="text-align:center;">{banlist_row.ROW_NUMBER}</td>
+			<td style="text-align:center;">{banlist_row.USERNAME_FULL}</td>
+			<td style="text-align:center;">{banlist_row.BAN_START}</td>
+			<td style="text-align:center;">{banlist_row.BAN_END}</td>
+			<td style="text-align:center;">{banlist_row.WARN}<br/> <!-- IF banlist_row.LASTWARN -->{L_LAST}{banlist_row.LASTWARN}<!-- ENDIF --></td>
+			<td style="text-align:center;">{banlist_row.BAN_REASON}</td>
+		</tr>
+		<!-- BEGINELSE -->
+		<tr class="bg1">
+			<td colspan="6">{L_NO_MEMBERS}</td>
+		</tr>
+		<!-- END banlist_row -->
+		</tbody>
+		</table>
+		
+    </div>
+</div>
+
+
+
+<div class="panel">
+	<div class="inner">
+	<div style="float:left;">
+<a href="http://www.hello-vitebsk.ru">Powered by Hello-Vitebsk</a>
+			
+		</div>
+		<ul class="linklist">
+			<li class="rightside pagination">
+				{L_BU} {TOTAL_USERS} &bull; 
+				<!-- IF .pagination -->
+		<!-- INCLUDE pagination.html -->
+	<!-- ELSE -->{PAGE_NUMBER}<!-- ENDIF -->
+			</li>
+		</ul>
+		</div>
+	</div>
+</form>
+	
+<!-- INCLUDE overall_footer.html -->
